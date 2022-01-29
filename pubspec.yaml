@@ -1,7 +1,7 @@
 name: flutter_shake_animated
 description: a new flutter shake animated project.
 version: 0.0.1
-repository:
+repository: https://github.com/aiyakuaile/flutter_shake_animated
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

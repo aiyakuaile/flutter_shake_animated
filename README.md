@@ -5,6 +5,8 @@
 
 ## Get started
 
+![shake animated](shake.gif)
+
 this shake effect I refer to this css open source library, ***[CSShake](https://elrumordelaluz.github.io/csshake/)***
 
 ### Add dependency

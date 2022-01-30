@@ -14,22 +14,21 @@ class ShakeCrazyConstant1 implements ShakeConstant {
 
   @override
   List<Offset> get translate => const [
-    Offset.zero,
-    Offset(19, 3),
-    Offset(0, 19),
-    Offset(15, 20),
-    Offset(14, -1),
-    Offset(18, 3),
-    Offset(1, -3),
-    Offset(-7, -17),
-    Offset(19, -1),
-    Offset(8, -12),
-    Offset.zero
-  ];
+        Offset.zero,
+        Offset(19, 3),
+        Offset(0, 19),
+        Offset(15, 20),
+        Offset(14, -1),
+        Offset(18, 3),
+        Offset(1, -3),
+        Offset(-7, -17),
+        Offset(19, -1),
+        Offset(8, -12),
+        Offset.zero
+      ];
 
   @override
   Duration get duration => const Duration(milliseconds: 100);
-
 }
 
 class ShakeCrazyConstant2 implements ShakeConstant {

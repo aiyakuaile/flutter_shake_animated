@@ -51,15 +51,35 @@ class _MyHomePageState extends State<MyHomePage> {
             spacing: 30,
             runSpacing: 30,
             children: [
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeDefaultConstant1(),ShakeDefaultConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeHardConstant1(),ShakeHardConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeSlowConstant1(),ShakeSlowConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeLittleConstant1(),ShakeLittleConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeHorizontalConstant1(),ShakeHorizontalConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeVerticalConstant1(),ShakeVerticalConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeRotateConstant1(),ShakeRotateConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeCrazyConstant1(),ShakeCrazyConstant2()]),
-              ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeOpacityConstant()]),
+              ShakeItem(autoPlay: _autoPlay, shakeList: [
+                ShakeDefaultConstant1(),
+                ShakeDefaultConstant2()
+              ]),
+              ShakeItem(
+                  autoPlay: _autoPlay,
+                  shakeList: [ShakeHardConstant1(), ShakeHardConstant2()]),
+              ShakeItem(
+                  autoPlay: _autoPlay,
+                  shakeList: [ShakeSlowConstant1(), ShakeSlowConstant2()]),
+              ShakeItem(
+                  autoPlay: _autoPlay,
+                  shakeList: [ShakeLittleConstant1(), ShakeLittleConstant2()]),
+              ShakeItem(autoPlay: _autoPlay, shakeList: [
+                ShakeHorizontalConstant1(),
+                ShakeHorizontalConstant2()
+              ]),
+              ShakeItem(autoPlay: _autoPlay, shakeList: [
+                ShakeVerticalConstant1(),
+                ShakeVerticalConstant2()
+              ]),
+              ShakeItem(
+                  autoPlay: _autoPlay,
+                  shakeList: [ShakeRotateConstant1(), ShakeRotateConstant2()]),
+              ShakeItem(
+                  autoPlay: _autoPlay,
+                  shakeList: [ShakeCrazyConstant1(), ShakeCrazyConstant2()]),
+              ShakeItem(
+                  autoPlay: _autoPlay, shakeList: [ShakeOpacityConstant()]),
               ShakeItem(autoPlay: _autoPlay, shakeList: [ShakeChunkConstant()]),
             ],
           )
@@ -68,8 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
           onPressed: _incrementCounter,
           tooltip: 'control animate play and pause',
-          child: _autoPlay ? const Icon(Icons.pause) : const Icon(Icons.play_arrow)
-      ),
+          child: _autoPlay
+              ? const Icon(Icons.pause)
+              : const Icon(Icons.play_arrow)),
     );
   }
 }
@@ -78,7 +99,9 @@ class ShakeItem extends StatelessWidget {
   final bool autoPlay;
   final Duration? duration;
   final List<ShakeConstant> shakeList;
-  const ShakeItem({Key? key,required this.shakeList,this.autoPlay = false,this.duration}) : super(key: key);
+  const ShakeItem(
+      {Key? key, required this.shakeList, this.autoPlay = false, this.duration})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -89,12 +112,17 @@ class ShakeItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(shakeList.first.runtimeType.toString().replaceAll(RegExp(r'\d+'), ''),style: const TextStyle(fontWeight: FontWeight.bold),),
+          Text(
+            shakeList.first.runtimeType
+                .toString()
+                .replaceAll(RegExp(r'\d+'), ''),
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 20),
           Wrap(
             spacing: 20,
             runSpacing: 20,
-            children: shakeList.map((shakeConstant){
+            children: shakeList.map((shakeConstant) {
               return ShakeWidget(
                 duration: duration,
                 shakeConstant: shakeConstant,
@@ -104,7 +132,11 @@ class ShakeItem extends StatelessWidget {
                   height: 44,
                   color: Colors.primaries[Random().nextInt(18)],
                   alignment: Alignment.center,
-                  child: Text(shakeConstant.runtimeType.toString(),style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                  child: Text(
+                    shakeConstant.runtimeType.toString(),
+                    style: const TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
                 ),
               );
             }).toList(),

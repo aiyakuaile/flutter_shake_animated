@@ -6,14 +6,19 @@ import 'package:flutter_shake_animated/src/shake_constant.dart';
 class ShakeWidget extends StatefulWidget {
   /// animate widget
   final Widget child;
+
   /// shake_xxxx_constant
   final ShakeConstant shakeConstant;
+
   /// animate duration
   final Duration? duration;
+
   /// true: start false:stop, default is false
   final bool autoPlay;
+
   /// only web, web onHover event, when autoPlay is true,web platform Mouse onHover will invalid
   final bool enableWebMouseHover;
+
   /// AnimationController can help if  want to control by yourself
   final Function(AnimationController controller)? onController;
 
@@ -24,8 +29,7 @@ class ShakeWidget extends StatefulWidget {
       this.duration,
       this.autoPlay = false,
       this.enableWebMouseHover = true,
-      this.onController
-      })
+      this.onController})
       : super(key: key);
 
   @override
@@ -51,9 +55,10 @@ class _ShakeWidgetState extends State<ShakeWidget>
     // translate
     if (widget.shakeConstant.translate.isEmpty) {
       _translateAnimation = ConstantTween(Offset.zero).animate(_controller);
-    } else if(widget.shakeConstant.translate.length == 1){
-      _translateAnimation = ConstantTween(widget.shakeConstant.translate.first).animate(_controller);
-    }else{
+    } else if (widget.shakeConstant.translate.length == 1) {
+      _translateAnimation = ConstantTween(widget.shakeConstant.translate.first)
+          .animate(_controller);
+    } else {
       _translateAnimation = TweenSequence(
         List.generate(widget.shakeConstant.translate.length - 1, (index) {
           final beginOffset = widget.shakeConstant.translate[index];
@@ -184,13 +189,13 @@ class _ShakeWidgetState extends State<ShakeWidget>
           ? widget.child
           : MouseRegion(
               onEnter: (PointerEnterEvent event) {
-                if(event.timeStamp.inMicroseconds != _tempEnterSecond){
+                if (event.timeStamp.inMicroseconds != _tempEnterSecond) {
                   _controller.repeat(reverse: true);
                   _tempEnterSecond = event.timeStamp.inMicroseconds;
                 }
               },
               onExit: (PointerExitEvent event) {
-                if(event.timeStamp.inMicroseconds != _tempEnterSecond) {
+                if (event.timeStamp.inMicroseconds != _tempEnterSecond) {
                   _controller.reset();
                 }
               },
@@ -220,5 +225,4 @@ class CustomShakeAnimated implements ShakeConstant {
   @override
   // TODO: implement translate
   List<Offset> get translate => throw UnimplementedError();
-
 }

@@ -1,5 +1,5 @@
 # flutter_shake_animated
-[![Pub](https://img.shields.io/pub/v/flutter_shake_animated.svg?style=flat-square)](https://pub.dartlang.org/packages/dio)
+[![Pub](https://img.shields.io/pub/v/flutter_shake_animated.svg?style=flat-square)](https://github.com/aiyakuaile/flutter_shake_animated)
 [![support](https://img.shields.io/badge/platform-flutter%7Cflutter%20web%7Cdart%20vm-ff69b4.svg?style=flat-square)](https://github.com/aiyakuaile/flutter_shake_animated)
 
 
@@ -13,7 +13,7 @@ this shake effect I refer to this css open source library, ***[CSShake](https://
 
 ```yaml
 dependencies:
-  flutter_shake_animated: ^0.0.1
+  flutter_shake_animated: ^0.0.5
 ```
 
 ## Usage

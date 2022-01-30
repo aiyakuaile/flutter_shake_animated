@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.5
+add shake animate type
 
-* TODO: Describe initial release.
+## 0.0.1
+init shake animate

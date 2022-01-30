@@ -5,7 +5,7 @@
 
 ## Get started
 
-![shake animated](shake.gif)
+![shake animated](https://raw.githubusercontent.com/aiyakuaile/flutter_shake_animated/main/shake.gif)
 
 this shake effect I refer to this css open source library, ***[CSShake](https://elrumordelaluz.github.io/csshake/)***
 

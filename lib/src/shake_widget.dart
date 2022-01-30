@@ -204,25 +204,3 @@ class _ShakeWidgetState extends State<ShakeWidget>
     );
   }
 }
-
-class CustomShakeAnimated implements ShakeConstant {
-  @override
-  // TODO: implement duration
-  Duration get duration => throw UnimplementedError();
-
-  @override
-  // TODO: implement interval
-  List<int> get interval => throw UnimplementedError();
-
-  @override
-  // TODO: implement opacity
-  List<double> get opacity => throw UnimplementedError();
-
-  @override
-  // TODO: implement rotate
-  List<double> get rotate => throw UnimplementedError();
-
-  @override
-  // TODO: implement translate
-  List<Offset> get translate => throw UnimplementedError();
-}

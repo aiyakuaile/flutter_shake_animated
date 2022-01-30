@@ -13,7 +13,7 @@ this shake effect I refer to this css open source library, ***[CSShake](https://
 
 ```yaml
 dependencies:
-  flutter_shake_animated: ^0.01
+  flutter_shake_animated: ^0.0.1
 ```
 
 ## Usage
